@@ -1,5 +1,5 @@
 OPTION (BUILD_UTILS "Build the various utilities" ON)
-MESSAGE (STATUS "===== Player utilities =====")
+MESSAGE (STATUS "===== Katana utilities =====")
 IF (BUILD_UTILS)
     ADD_SUBDIRECTORY (dgps_server)
     ADD_SUBDIRECTORY (logsplitter)

@@ -506,16 +506,17 @@ Quit(int signum)
 void
 PrintVersion()
 {
-  fprintf(stderr, "Player v.%s\n", PLAYER_VERSION);
+  fprintf(stderr, "Katana v.%s\n", PLAYER_VERSION);
 }
 
 void
 PrintCopyrightMsg()
 {
-  fprintf(stderr,"\n* Part of the Player/Stage/Gazebo Project [http://playerstage.sourceforge.net].\n");
-  fprintf(stderr, "* Copyright (C) 2000 - 2013 Brian Gerkey, Richard Vaughan, Andrew Howard,\n* Nate Koenig, and contributors.");
-  fprintf(stderr," Released under the GNU General Public License.\n");
-  fprintf(stderr,"* Player comes with ABSOLUTELY NO WARRANTY.  This is free software, and you\n* are welcome to redistribute it under certain conditions; see COPYING\n* for details.\n\n");
+  fprintf(stderr,"Proyecto Katana (Sistema SAMURAI).\n\n");
+  fprintf(stderr,"* Librerias de Control y Sensado Robotico.\n");
+  fprintf(stderr,"* Laboratorio de Robotica.\n");
+  fprintf(stderr,"* Universidad Autonoma de Ciudad Juarez.\n");
+  fprintf(stderr,"* Instituto de Ingenieria y Tecnologia.\n\n");
 }
 
 void
@@ -524,17 +525,17 @@ PrintUsage()
   int maxlen=66;
   char** sortedlist;
 
-  fprintf(stderr, "USAGE:  player [options] [<configfile>]\n\n");
+  fprintf(stderr, "USAGE:  katana [options] [<configfile>]\n\n");
   fprintf(stderr, "Where [options] can be:\n");
   fprintf(stderr, "  -h             : print this message.\n");
   fprintf(stderr, "  -d <level>     : debug message level (0 = none, 1 = default, 9 = all).\n");
-  fprintf(stderr, "  -p <port>      : port where Player will listen. "
+  fprintf(stderr, "  -p <port>      : port where Katana will listen. "
           "Default: %d\n", PLAYERTCP_DEFAULT_PORT);
   fprintf(stderr, "  -q             : quiet mode: minimizes the console output on startup.\n");
-  fprintf(stderr, "  -l <logfile>   : log player output to the specified file\n");
+  fprintf(stderr, "  -l <logfile>   : log katana output to the specified file\n");
   fprintf(stderr, "  -s             : fork to a daemon process as the current user.\n");
   fprintf(stderr, "  <configfile>   : load the the indicated config file\n");
-  fprintf(stderr, "\nThe following %d drivers were compiled into Player:\n\n    ",
+  fprintf(stderr, "\nThe following %d drivers were compiled into Katana:\n\n    ",
           driverTable->Size());
   sortedlist = driverTable->SortDrivers();
   for(int i=0, len=0; i<driverTable->Size(); i++)

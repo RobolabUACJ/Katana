@@ -5,7 +5,7 @@
  CPP    = mex
 
 #-------------------------------------------#
-INCDIR = -I. -I/usr/local/include/player-3.0/
+INCDIR = -I. -I/usr/local/include/katana-3.0/
 DBG    = -g
 OPT    = -O3
 CFLAGS = $(INCDIR)
@@ -15,7 +15,7 @@ all:  client sonar laser pos2d localize
 	cd cpp/ && make all
 
 client: player_client_connect player_client_disconnect player_client_read
-sonar: player_sonar_connect player_sonar_disconnect player_sonar 
+sonar: player_sonar_connect player_sonar_disconnect player_sonar
 laser: player_laser_connect player_laser_disconnect player_laser player_laser_range
 pos2d: player_pos2d_connect player_pos2d_disconnect player_pos2d player_pos2d_set player_pos2d_speed player_pos2d_enable player_pos2d_goto
 localize: player_localize_connect player_localize_disconnect player_localize_particles player_localize_hypothesis

@@ -174,7 +174,7 @@ void
 print_usage()
 {
   printf("\n"
-         " playercam - camera test utility for a player camera\n\n"
+         " playercam - camera test utility for a katana camera\n\n"
          "USAGE:  playercam [options] \n\n"
          "Where [options] can be:\n"
          "  -help          : print this message.\n"

@@ -75,7 +75,7 @@
 /** Default maximum length for a message queue */
 #define PLAYER_MSGQUEUE_DEFAULT_MAXLEN 1024
 /** String that is spit back as a banner on connection */
-#define PLAYER_IDENT_STRING    "Player v."
+#define PLAYER_IDENT_STRING    "Katana v."
 /** Length of string that is spit back as a banner on connection */
 #define PLAYER_IDENT_STRLEN 32
 /** Length of authentication key */

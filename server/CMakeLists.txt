@@ -33,8 +33,8 @@ ENDIF (PLAYER_DRIVERSLIB_LIBDIRS)
 # Source files
 SET (playerSrcs server.cc)
 # Server executable
-ADD_EXECUTABLE (player ${playerSrcs})
-TARGET_LINK_LIBRARIES (player playerdrivers playercore playercommon playertcp
+ADD_EXECUTABLE (katana ${playerSrcs})
+TARGET_LINK_LIBRARIES (katana playerdrivers playercore playercommon playertcp
                        playerudp playerinterface playerwkb ${playerreplaceLib}
                        ${PLAYERCORE_EXTRA_LINK_LIBRARIES})
 IF (INCLUDE_RTKGUI)
@@ -49,9 +49,9 @@ ENDIF (PLAYER_OS_SOLARIS)
 STRING (REGEX REPLACE "^[ ]+" "" PLAYER_DRIVERSLIB_LINKFLAGS "${PLAYER_DRIVERSLIB_LINKFLAGS}")
 STRING (REGEX REPLACE "[ ]+$" "" PLAYER_DRIVERSLIB_LINKFLAGS "${PLAYER_DRIVERSLIB_LINKFLAGS}")
 IF (PLAYER_DRIVERSLIB_LINKFLAGS)
-    TARGET_LINK_LIBRARIES (player ${PLAYER_DRIVERSLIB_LINKFLAGS})
+    TARGET_LINK_LIBRARIES (katana ${PLAYER_DRIVERSLIB_LINKFLAGS})
 ENDIF (PLAYER_DRIVERSLIB_LINKFLAGS)
-INSTALL (TARGETS player DESTINATION ${PLAYER_BINARY_INSTALL_DIR} COMPONENT applications)
+INSTALL (TARGETS katana DESTINATION ${PLAYER_BINARY_INSTALL_DIR} COMPONENT applications)
 
 # Clean up stuff from the drivers
 PLAYERDRIVER_RESET_LISTS ()
